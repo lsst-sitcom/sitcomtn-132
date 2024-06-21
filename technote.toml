@@ -18,6 +18,6 @@ name.family = "Cortes"
 internal_id = "cortes"
 
 [[technote.authors.affiliations]]
-name = ""
-internal_id = ""
-address = ""
+name = "Vera C. Rubin Observatory"
+internal_id = "RubinOpsC"
+address = "Rubin Observatory/NSF NOIRLab, Casilla 603, La Serena, Chile"
