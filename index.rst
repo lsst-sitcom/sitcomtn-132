@@ -1,12 +1,11 @@
-:tocdepth: 1
-
-.. sectnum::
-
-.. Metadata such as the title, authors, and description are set in metadata.yaml
 
 .. note::
 
    **This technote is a work-in-progress.**
+
+##############################
+TopBox Controller Improvements
+##############################
 
 Abstract
 ==========
@@ -18,8 +17,11 @@ Introduction
 
 The NOIRLab team was asked to improve the SCB software in oder to avoid the "phantom dome closures", described in the https://jira.lsstcorp.org/browse/OBS-89. This document describes the improvements to the software.
 
-New Control Software Commands
+Software Updates
 ================================================
+
+New Control Software Commands
+-------------------------------------
 
 **MO**
 
@@ -78,6 +80,21 @@ The CF (**C** lear **F** ault) command clears the faults in the FPGA.
 
 The SY (**SY** nc) command starts the Encoder-Limits Synchronization routine. This enables and executes a safe drive loop for synchronizing the encoder reading with the respective limit switch on each process. If this flag is set to TRUE both doors will begin to move. Please wait for SYNC-DONE to get TRUE. The STOP command can abort the process.
 
+New Logging Feature
+------------------------
 
+This new feature will log (1) commands sent by either the host computer though telnet communication or the CSC, (2) internal software failures, and (3) system failures, like encoder reading incoherences, limit switch incoherences, timeouts, loss of communications between TopBox and MainBox controllers, etc.
+This log can be read offline and is intended to be just for debugging purposes.
+
+The commands will be logged with the `CMD` label before the command, the internal failures will have the `ERROR` label before the error information, and the system failures will have the `FAILURE` label before the data.
+
+This logging information will be saved in the `log.txt` file places in the `/home/log/` directory.
+If the log directory is not created, please do:
+
+.. code-block:: bash
+   :linenos:
+      
+      admin@NI-cRIO# mkdir /home/log/
+      admin@NI-cRIO# chown -R lvuser:ni /home/log/
 
 See the `Documenteer documentation <https://documenteer.lsst.io/technotes/index.html>`_ for tips on how to write and configure your new technote.
