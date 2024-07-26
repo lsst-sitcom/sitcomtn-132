@@ -23,21 +23,17 @@ Software Updates
 New Control Software Commands
 -------------------------------------
 
-**MO**
+**MO** : The MO (**M** aintenance **O** n) command enables the Maintenance Mode.
 
-The MO (**M** aintenance **O** n) command enables the Maintenance Mode.
+**MF** : The MF (**M** aintenance O **F** f) command disables the Maintenance Mode.
 
-**MF**
+**d OVE** : The OVE (**OV** erride **E** nable) command enables the override number “d”.
+The number “d” is defined as an 8-bit unsigned integer (U8).
+Check the List Of Override commands for more information.
 
-The MF (**M** aintenance O **F** f) command disables the Maintenance Mode.
-
-**d OVE**
-
-The OVE (**OV** erride **E** nable) command enables the override number “d”. The number “d” is defined as an 8-bit unsigned integer (U8). Check the List Of Override commands for more information.
-
-**d OVD**
-
-The OVD (**OV** erride **D** isable) command disables the override number “d”. The number “d” is defined as an 8-bit unsigned integer (U8). Check the List Of Override commands for more information.
+**d OVD** : The OVD (**OV** erride **D** isable) command disables the override number “d”.
+The number “d” is defined as an 8-bit unsigned integer (U8).
+Check the List Of Override commands for more information.
 
 **List Of Override**
 
@@ -68,17 +64,16 @@ The OVD (**OV** erride **D** isable) command disables the override number “d�
 * 24: IO-module3-fault
 * 25: IO-module4-fault
 
-**OV?**
+**OV?** : Issuing the OV? (**OV** erride Status **?** ) command gives the full override status.
+It is intended for engineering setup purposes only.
 
-Issuing the OV? (**OV** erride Status **?** ) command gives the full override status. It is intended for engineering setup purposes only.
+**CF** : The CF (**C** lear **F** ault) command clears the faults in the FPGA.
 
-**CF**
-
-The CF (**C** lear **F** ault) command clears the faults in the FPGA.
-
-**SY**
-
-The SY (**SY** nc) command starts the Encoder-Limits Synchronization routine. This enables and executes a safe drive loop for synchronizing the encoder reading with the respective limit switch on each process. If this flag is set to TRUE both doors will begin to move. Please wait for SYNC-DONE to get TRUE. The STOP command can abort the process.
+**SY** : The SY (**SY** nc) command starts the Encoder-Limits Synchronization routine.
+This enables and executes a safe drive loop for synchronizing the encoder reading with the respective limit switch on each process.
+If this flag is set to TRUE both doors will begin to move.
+Please wait for SYNC-DONE to get TRUE.
+The STOP command can abort the process.
 
 New Logging Feature
 ------------------------
@@ -86,15 +81,14 @@ New Logging Feature
 This new feature will log (1) commands sent by either the host computer though telnet communication or the CSC, (2) internal software failures, and (3) system failures, like encoder reading incoherences, limit switch incoherences, timeouts, loss of communications between TopBox and MainBox controllers, etc.
 This log can be read offline and is intended to be just for debugging purposes.
 
-The commands will be logged with the `CMD` label before the command, the internal failures will have the `ERROR` label before the error information, and the system failures will have the `FAILURE` label before the data.
+The commands will be logged with the ``CMD`` label before the command, the internal failures will have the ``ERROR`` label before the error information, and the system failures will have the ``FAILURE`` label before the data.
 
-This logging information will be saved in the `log.txt` file places in the `/home/log/` directory.
+This logging information will be saved in the ``log.txt`` file places in the ``/home/log/`` directory.
 If the log directory is not created, please do:
 
-.. code-block:: bash
-   :linenos:
+.. code-block:: bash      
       
       admin@NI-cRIO# mkdir /home/log/
       admin@NI-cRIO# chown -R lvuser:ni /home/log/
 
-See the `Documenteer documentation <https://documenteer.lsst.io/technotes/index.html>`_ for tips on how to write and configure your new technote.
+This page was last modified |today|.
