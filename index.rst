@@ -1,4 +1,7 @@
 
+.. toctree::
+    :maxdepth: 2
+
 .. note::
 
    **This technote is a work-in-progress.**
@@ -30,6 +33,8 @@ New Control Software Commands
 **d OVE** : The OVE (Override Enable) command enables the override number “d”. The number “d” is defined as an 8-bit unsigned integer (U8). Check the List Of Override commands for more information.
 
 **d OVD** : The OVD (Override Disable) command disables the override number “d”. The number “d” is defined as an 8-bit unsigned integer (U8). Check the List Of Override commands for more information.
+
+For the complete list of telnet commands go to ...
 
 **List Of Override**
 
@@ -84,10 +89,10 @@ New Telnet Port
 ------------------------
 
 The new telnet port is ``17307``.
-So, the connect to the TopBox controller, do this:
+So, to connect to the TopBox controller, do this:
 
-.. code-block: bash
-
+.. code-block:: bash      
+      
       telnet auxtel-crio01.cp.lsst.org 17307
       At the > prompt, type HELP.
 
