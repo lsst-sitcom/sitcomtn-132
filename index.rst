@@ -20,6 +20,15 @@ Introduction
 
 The NOIRLab team was asked to improve the SCB software in oder to avoid the "phantom dome closures", described in the https://jira.lsstcorp.org/browse/OBS-89. This document describes the improvements to the software.
 
+TopBox cRIO Information
+===============================
+
+Model: cRIO-9032
+IP Address: 139.229.170.118
+MAC Eth0: 00:80:2f:27:7e:c7
+MAC Eth1: 00:80:2f:27:7e:c8
+FQDN: auxtel-crio01.cp.lsst.org
+
 Software Updates
 ================================================
 
