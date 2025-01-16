@@ -24,9 +24,13 @@ TopBox cRIO Information
 ===============================
 
 Model: cRIO-9032
+
 IP Address: 139.229.170.118
+
 MAC Eth0: 00:80:2f:27:7e:c7
+
 MAC Eth1: 00:80:2f:27:7e:c8
+
 FQDN: auxtel-crio01.cp.lsst.org
 
 Software Updates
