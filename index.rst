@@ -115,7 +115,7 @@ Clear Faults Procedure
       > CF
       > MF
 
-* **MO** enables the Maintenance Mode, **CF** clears the fauls, and **MF** disables the Maintenance Mode.
+* **MO** enables the Maintenance Mode, **CF** clears the faults, and **MF** disables the Maintenance Mode.
 
 New Logging Feature
 ------------------------
