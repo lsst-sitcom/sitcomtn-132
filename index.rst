@@ -109,5 +109,33 @@ So, to connect to the TopBox controller, do this:
       telnet auxtel-crio01.cp.lsst.org 17307
       At the > prompt, type HELP.
 
+New TopBox GUI
+==================
+
+Since the NORLab team removed the graphical user interface (GUI) based on the Internet Explorer web navigator, we created a new way to access the old and new user interfaces.
+This was developed with LabVIEW and is based on the NI VI-Server technology.
+To access the TopBox GUI please follow these steps.
+
+* Go to ``aux-brick01.cp.lsst.org`` machine. The password is stored in the 1Password bault.
+
+* Open the ``TopBoxGUI`` executable from the Desktop.
+
+.. image:: images/image1.PNG
+
+* Pick either the ``Launch Old Interface`` option or the ``Launch New Interface``.
+
+.. image:: images/image2.PNG
+
+* This is the Old Interface view:
+
+.. image:: images/image3.PNG
+
+* This is the New Interface view:
+
+.. image:: images/image4.PNG
+
+Note: this is a temporary solution for TopBox only.
+The NOIRLab team is working on a new web-based GUI.
+Stay tunned.
 
 This page was last modified |today|.
