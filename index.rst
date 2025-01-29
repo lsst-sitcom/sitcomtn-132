@@ -110,10 +110,10 @@ Clear Faults Procedure
 
 .. code-block:: bash      
       
-      telnet auxtel-crio01.cp.lsst.org 17307
-      MO
-      CF
-      MF
+      > telnet auxtel-crio01.cp.lsst.org 17307
+      > MO
+      > CF
+      > MF
 
 * **MO** enables the Maintenance Mode, **CF** clears the fauls, and **MF** disables the Maintenance Mode.
 
