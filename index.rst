@@ -25,13 +25,32 @@ TopBox cRIO Information
 
 Model: cRIO-9032
 
+S/N: 01BF561A
+
 IP Address: 139.229.170.118
 
 MAC Eth0: 00:80:2f:27:7e:c7
 
 MAC Eth1: 00:80:2f:27:7e:c8
 
-FQDN: auxtel-crio01.cp.lsst.org
+FQDN (DNS name): auxtel-crio01.cp.lsst.org
+
+MainBoxBox cRIO Information
+===============================
+
+Model: cRIO-9042
+
+S/N: 022E7BDD
+
+IP: 139.229.170.56
+
+MAC Eth0: 00:80:2F:40:37:B2
+
+MAC Eth1: 00:80:2F:40:37:B3
+
+FQDN (DNS name): auxtel-dome-mainbox.cp.lsst.org (previous was: auxtel-dome-crio-main.cp.lsst.org)
+
+Telnet Port: 17310
 
 Software Updates
 ================================================
@@ -83,6 +102,20 @@ For the complete list of telnet commands go to ...
 **CF** : The CF (Clear Fault) command clears the faults in the FPGA.
 
 **SY** : The SY (Sync) command starts the Encoder-Limits Synchronization routine. This enables and executes a safe drive loop for synchronizing the encoder reading with the respective limit switch on each process. If this flag is set to TRUE both doors will begin to move. Please wait for SYNC-DONE to get TRUE. The STOP command can abort the process.
+
+Clear Faults Procedure
+------------------------
+
+* Enter the TopBox cRIO with telnet:
+
+.. code-block:: bash      
+      
+      telnet auxtel-crio01.cp.lsst.org 17307
+      MO
+      CF
+      MF
+
+* **MO** enables the Maintenance Mode, **CF** clears the fauls, and **MF** disables the Maintenance Mode.
 
 New Logging Feature
 ------------------------
